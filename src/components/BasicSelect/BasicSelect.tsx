@@ -18,6 +18,7 @@ export const BasicSelect = () => {
 	return (
 		<div className="flex justify-center">
 			<div className="w-1/4">
+				<div className="mb-4 font-bold">{JSON.stringify(value)}</div>
 				<Select
 					value={value}
 					onChange={handleChange}
