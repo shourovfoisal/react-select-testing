@@ -14,14 +14,32 @@ export const Navbar = () => {
 					</Link>
 				</li>
 
-				{/* <li>
+				<li>
 					<Link
-						to="/link"
+						to="/basic-select"
 						className="block px-3 py-2 shadow-md rounded-lg bg-white"
 					>
-						Menu
+						Basic Select
 					</Link>
-				</li> */}
+				</li>
+
+				<li>
+					<Link
+						to="/async-select"
+						className="block px-3 py-2 shadow-md rounded-lg bg-white"
+					>
+						Async Select
+					</Link>
+				</li>
+
+				<li>
+					<Link
+						to="/hook-form-select"
+						className="block px-3 py-2 shadow-md rounded-lg bg-white"
+					>
+						Hook Form Select
+					</Link>
+				</li>
 			</ul>
 		</div>
 	);

@@ -1,6 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Layout, Navbar } from "./components";
+import {
+	AsynchronousSelect,
+	BasicSelect,
+	HookFormSelect,
+	Layout,
+	Navbar,
+} from "./components";
 
 function App() {
 	return (
@@ -8,7 +14,9 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					{/* <Route path="/link" element={<Component />} /> */}
+					<Route path="/basic-select" element={<BasicSelect />} />
+					<Route path="/async-select" element={<AsynchronousSelect />} />
+					<Route path="/hook-form-select" element={<HookFormSelect />} />
 				</Route>
 			</Routes>
 		</div>
