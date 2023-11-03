@@ -9,7 +9,7 @@ type FormValues = {
 };
 
 export const HookFormSelect = () => {
-	const { control, getValues } = useForm<FormValues>();
+	const { control } = useForm<FormValues>();
 	const { personAge } = useWatch<FormValues>({ control });
 	const handleChange = (
 		value: SingleValue<PersonAge>,
@@ -30,7 +30,7 @@ export const HookFormSelect = () => {
 				<Controller
 					control={control}
 					name="personAge"
-					render={({ field, fieldState, formState }) => {
+					render={({ field }) => {
 						return (
 							<Select
 								{...field}
