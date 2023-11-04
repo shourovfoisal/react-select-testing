@@ -9,7 +9,7 @@ type FormValues = {
 };
 
 export const HookFormSelect = () => {
-	const { control } = useForm<FormValues>();
+	const { control, setValue } = useForm<FormValues>();
 	const { personAge } = useWatch<FormValues>({ control });
 	const handleChange = (
 		value: SingleValue<PersonAge>,
@@ -17,6 +17,16 @@ export const HookFormSelect = () => {
 	) => {
 		console.log(value);
 		console.log(actionMeta);
+	};
+
+	const handleAddNew = () => {
+		const newValue = {
+			label: "Max",
+			value: 40,
+			ageGroup: "Adult",
+		};
+		personAges.push(newValue);
+		setValue("personAge", newValue);
 	};
 
 	return (
@@ -50,6 +60,7 @@ export const HookFormSelect = () => {
 						);
 					}}
 				/>
+				<button onClick={handleAddNew}>Add New</button>
 				<DevTool control={control} placement="bottom-right" />
 			</div>
 		</div>

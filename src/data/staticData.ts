@@ -52,7 +52,7 @@ export const personAges: PersonAge[] = [
 	},
 	{
 		label: "Tim",
-		value: 10,
+		value: 11,
 		ageGroup: "Child",
 	},
 ];
