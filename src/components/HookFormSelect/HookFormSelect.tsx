@@ -3,9 +3,10 @@ import { DevTool } from "@hookform/devtools";
 import Select, { ActionMeta, SingleValue } from "react-select";
 import { personAges } from "../../data/staticData";
 import type { PersonAge } from "../../data/staticData";
+import { Button } from "../common";
 
 type FormValues = {
-	personAge: PersonAge;
+	personAge?: PersonAge;
 };
 
 export const HookFormSelect = () => {
@@ -37,6 +38,12 @@ export const HookFormSelect = () => {
 					{JSON.stringify(getValues("personAge"))}
 				</div> */}
 				<div className="mb-4 font-bold">{JSON.stringify(personAge)}</div>
+				<Button
+					onClick={() => setValue("personAge", undefined)}
+					className="p-2 bg-purple-200 rounded-lg shadow-md ml-auto mb-4"
+				>
+					Clear Selection
+				</Button>
 				<Controller
 					control={control}
 					name="personAge"
